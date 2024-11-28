@@ -10,6 +10,40 @@
 #item1{
     border: 2px solid rgb(72, 201, 162);
     height:75px;
-    width: 330px;
+    width: 350px;
     margin: 2rem 0 2rem 0;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin:0 25rem 2rem 25rem;
+}
+#item2{
+    border: 2px solid rgb(72, 201, 162);
+    height: 55px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.box3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:42px;
+    margin:0 25rem 2rem 25rem;
+}
+#item3{
+    border: 2px solid rgb(72, 201, 162);
+    height: 55px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: large;
 }
