@@ -47,3 +47,13 @@
     font-weight: 700;
     font-size: large;
 }
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:1rem 25rem 1rem 25rem;
+}
+#subtitle{
+    font-size: 36px;
+    font-weight: 900;
+}
