@@ -29,5 +29,5 @@ let operate = function(operator,num1,num2){
     }
 }
 
-let show = operate('*',8 ,8);
-console.log(show)
+let showButton = document.querySelector('.box2');
+showButton.addEventListener('click' , operate)

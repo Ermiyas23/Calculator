@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     margin:0 25rem 2rem 25rem;
 }
 .item2{
@@ -29,6 +29,7 @@
     line-height: 50px;
     font-weight: 700;
     font-size: large;
+    background-color: white;
 }
 
 .box3{
