@@ -29,5 +29,3 @@ let operate = function(operator,num1,num2){
     }
 }
 
-let showButton = document.querySelector('.box2');
-showButton.addEventListener('click' , operate)
