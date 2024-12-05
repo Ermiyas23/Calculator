@@ -36,6 +36,9 @@ btnNum.forEach(btn => {
     btn.addEventListener('click' ,(e)=>{
         let textButton = e.target.textContent;
         btnDisplay.value += textButton
+        if(btn.id === 'clear'){
+            btnDisplay.value = ''
+        }
     })
     
 });
