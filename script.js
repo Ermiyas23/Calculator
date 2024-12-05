@@ -29,3 +29,13 @@ let operate = function(operator,num1,num2){
     }
 }
 
+let btnNum = document.querySelectorAll('.item2');
+let btnDisplay = document.querySelector('#item1')
+
+btnNum.forEach(btn => {
+    btn.addEventListener('click' ,(e)=>{
+        let textButton = e.target.textContent;
+        btnDisplay.value += textButton
+    })
+    
+});
