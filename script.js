@@ -29,7 +29,7 @@ let operate = function(operator,num1,num2){
     }
 }
 
-let btnNum = document.querySelectorAll('.item2');
+let btnNum = document.querySelectorAll('button');
 let btnDisplay = document.querySelector('#item1')
 
 btnNum.forEach(btn => {
