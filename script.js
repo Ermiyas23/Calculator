@@ -31,14 +31,25 @@ let operate = function(operator,num1,num2){
 
 let btnNum = document.querySelectorAll('button');
 let btnDisplay = document.querySelector('#item1')
+let selectOperator = null;
 
+let num;
 btnNum.forEach(btn => {
     btn.addEventListener('click' ,(e)=>{
         let textButton = e.target.textContent;
-        btnDisplay.value += textButton
         if(btn.id === 'clear'){
             btnDisplay.value = ''
         }
+
+        if (textButton === '+' || textButton === '-' ||
+             textButton === '*' || textButton === '/') {
+            selectOperator = textButton;
+        }
+        if(!isNaN(textButton)){
+            btnDisplay.value += textButton
+        }
     })
-    
+
 });
+
+
