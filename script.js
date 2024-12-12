@@ -47,9 +47,9 @@ btnNum.forEach(btn => {
             num1 = null;
             selectOperator = null;
         }else if(!isNaN(textButton)){
-            btnDisplay.value += textButton;
+           btnDisplay.value += textButton;
             if(selectOperator === null){
-                num1 = parseFloat(textButton);
+                num1 = parseFloat(btnDisplay.value);
             }
         }else if (textButton === '+' || textButton === '-' ||
             textButton === '*' || textButton === '/') {
