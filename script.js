@@ -32,24 +32,29 @@ let operate = function(operator,num1,num2){
 let btnNum = document.querySelectorAll('button');
 let btnDisplay = document.querySelector('#item1')
 let selectOperator = null;
+let num1 = null;
 
-let num;
 btnNum.forEach(btn => {
     btn.addEventListener('click' ,(e)=>{
         let textButton = e.target.textContent;
         if(btn.id === 'clear'){
-            btnDisplay.value = ''
-        }
+            btnDisplay.value = '';
+            num1 = null;
+            selectOperator = null;
+        }else if(!isNaN(textButton)){
+            btnDisplay.value += textButton;
+            if(selectOperator === null){
+                num1 = parseFloat(textButton);
+            }
+        }else if (textButton === '+' || textButton === '-' ||
+            textButton === '*' || textButton === '/') {
+           selectOperator = textButton;
+           btnDisplay.value = '';
+       }
 
-        if (textButton === '+' || textButton === '-' ||
-             textButton === '*' || textButton === '/') {
-            selectOperator = textButton;
-        }
-        if(!isNaN(textButton)){
-            btnDisplay.value += textButton
-        }
+      
+       
+        
     })
 
 });
-
-
