@@ -11,7 +11,12 @@ let multiply = function( a , b){
 }
 
 let division = function(a , b){
-    return a / b;
+    if(b === 0){
+        return 'divisible by zero is error';
+    }else{
+        return a / b;
+    }
+    
 };
 
 let operate = function(operator,num1,num2){
@@ -51,10 +56,11 @@ btnNum.forEach(btn => {
            selectOperator = textButton;
            btnDisplay.value = '';
        }
+       if(btn.id === 'equal'){
+       let result = operate(selectOperator , num1 ,parseFloat(btnDisplay.value));
+       btnDisplay.value = result
+       }
 
-      
-       
-        
     })
 
 });
