@@ -68,3 +68,10 @@ button:hover {
   body{
     background-color: tomato;
   }
+  #equal:hover{
+    background-color: rgb(47, 173, 47);
+  }
+  #clear:hover{
+    background-color: red;
+    color:black;
+  }
