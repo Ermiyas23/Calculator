@@ -39,6 +39,7 @@ let btnDisplay = document.querySelector('#item1')
 let selectOperator = null;
 let num1 = null;
 
+
 btnNum.forEach(btn => {
     btn.addEventListener('click' ,(e)=>{
         let textButton = e.target.textContent;
@@ -46,21 +47,28 @@ btnNum.forEach(btn => {
             btnDisplay.value = '';
             num1 = null;
             selectOperator = null;
+            num2 = null;
         }else if(!isNaN(textButton)){
            btnDisplay.value += textButton;
             if(selectOperator === null){
                 num1 = parseFloat(btnDisplay.value);
+            }else{
+                let num2 = parseFloat(btnDisplay.value);
+                let result = operate(selectOperator , num1 ,num2);
+                btnDisplay.value = Math.round(result); 
+                num1 = result;
+                selectOperator = null; 
             }
         }else if (textButton === '+' || textButton === '-' ||
             textButton === '*' || textButton === '/') {
            selectOperator = textButton;
            btnDisplay.value = '';
        }
+       
        if(btn.id === 'equal'){
-       let result = operate(selectOperator , num1 ,parseFloat(btnDisplay.value));
-       btnDisplay.value = result
+       btnDisplay.value = Math.round(result);
        }
-
+       
     })
 
 });
