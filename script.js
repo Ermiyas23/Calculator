@@ -40,6 +40,7 @@ let selectOperator = null;
 let num1 = null;
 
 
+
 btnNum.forEach(btn => {
     btn.addEventListener('click' ,(e)=>{
         let textButton = e.target.textContent;
@@ -49,6 +50,7 @@ btnNum.forEach(btn => {
             selectOperator = null;
 
         }else if(!isNaN(textButton)){
+            btnDisplay.classList.add('btnColor');
            btnDisplay.value += textButton;
             if(selectOperator === null){
                 num1 = parseFloat(btnDisplay.value);
@@ -56,12 +58,13 @@ btnNum.forEach(btn => {
 
         } else if (textButton === '+' || textButton === '-' ||
             textButton === '*' || textButton === '/') {
-    if (num1 !== null) {
-        selectOperator = textButton;
-        btnDisplay.value = ''; 
-    }
-}else if(textButton === '='){
+            if (num1 !== null) {
+            selectOperator = textButton;
+            btnDisplay.value = ''; 
+            }
+        }else if(textButton === '='){
             if(num1 !== null && selectOperator !== null){
+                btnDisplay.classList.add('btnColor');
                 let num2 = parseFloat(btnDisplay.value);
                 let result = operate(selectOperator , num1 ,num2);
                 btnDisplay.value = Math.round(result); 

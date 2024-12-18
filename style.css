@@ -75,3 +75,7 @@ button:hover {
     background-color: red;
     color:black;
   }
+  .btnColor{
+    font-weight: 500;
+    font-size: 2em;
+  }
